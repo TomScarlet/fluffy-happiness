@@ -1,6 +1,8 @@
 package mygame;
 
 import com.jme3.app.SimpleApplication;
+import com.jme3.input.controls.ActionListener;
+import com.jme3.input.controls.MouseButtonTrigger;
 import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
 import com.jme3.renderer.RenderManager;
@@ -26,6 +28,9 @@ public class Main extends SimpleApplication {
         
         app.start(JmeContext.Type.Display);
     }
+    
+    
+    ButtonHolder holder;
 
     @Override
     public void simpleInitApp() {
@@ -36,8 +41,26 @@ public class Main extends SimpleApplication {
         mat.setColor("Color", ColorRGBA.Blue);
         geom.setMaterial(mat);
 
+        flyCam.setEnabled(false);
+        
+        holder = new ButtonHolder(guiNode, assetManager);
+        
         rootNode.attachChild(geom);
+        
+        inputManager.addMapping("MouseLeftClicked", new MouseButtonTrigger(mouseInput.BUTTON_LEFT));
+        
+        inputManager.addListener(actionListener, "MouseLeftClicked");
     }
+    
+    private final ActionListener actionListener = new ActionListener() {
+        @Override
+        public void onAction(String name, boolean isPressed, float tpf) {
+            if (name.equals("MouseLeftClicked") && isPressed == true) {
+                holder.CheckMousePos(inputManager.getCursorPosition());
+            }
+        }
+            
+    };
 
     @Override
     public void simpleUpdate(float tpf) {
