@@ -22,6 +22,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>assets</name>
+			<type>2</type>
+			<location>/home/martin/git/fluffy-happiness/assets</location>
+		</link>
+		<link>
 			<name>src</name>
 			<type>2</type>
 			<location>/home/martin/git/fluffy-happiness/src</location>
