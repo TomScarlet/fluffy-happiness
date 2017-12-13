@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mygame;
+package com.fluffyhappiness;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.math.Vector2f;
@@ -29,14 +29,26 @@ public class ButtonHolder implements ButtonClicked {
     }
     
     public void CheckMousePos(Vector2f pos) {
-        button.CheckPosition(pos);
+        button.checkClickPosition(pos);
     }
 
     @Override
-    public void buttonCallback(String id) {
+    public void ButtonCallback(String id) {
         System.out.println("Button Clicked");
     }
-    
-    
+    /**
+     * Takes size, texture and config
+     */
+    /**
+     * 
+     * @param width Width of button
+     * @param height Height of button
+     * @param texPath Path to texture and texture config files
+     */
+    public Button CreateButton(int width, int height, String texPath) {
+        
+        Button temp = new Button(this);
+        return temp;
+    }
     
 }
