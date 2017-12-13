@@ -1,0 +1,3 @@
+[submodule "src/net/mmarss/grease/ecs"]
+	path = src/net/mmarss/grease/ecs
+	url = https://gist.github.com/0dad53f56adbd4b002eada1a5ed7eff6.git
