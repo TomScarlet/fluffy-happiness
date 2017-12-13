@@ -1,0 +1,23 @@
+
+MaterialDef GuiButtonSpritesheet {
+
+    MaterialParameters {
+        Texture2D ColorMap
+        Vector2 ImageSize
+        Float BorderWidth
+        Vector2 ButtonSize
+    }
+
+    Technique {
+        VertexShader GLSL100:   MatDefs/GuiButtonSpritesheet.vert
+        FragmentShader GLSL100: MatDefs/GuiButtonSpritesheet.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+
+        Defines {
+        }
+    }
+
+}
