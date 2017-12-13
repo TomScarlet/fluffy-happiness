@@ -17,4 +17,43 @@
       </plugin>
     </plugins>
   </build>
+  <properties>
+  	<jme3_version>3.1.0-stable</jme3_version>
+  </properties>
+  <repositories>
+  	<repository>
+  		<id>bintray</id>
+  		<url>http://jcenter.bintray.com</url>
+  		<snapshots>
+  			<enabled>false</enabled>
+  		</snapshots>
+  	</repository>
+  </repositories>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.jmonkeyengine</groupId>
+  		<artifactId>jme3-desktop</artifactId>
+  		<version>${jme3_version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jmonkeyengine</groupId>
+  		<artifactId>jme3-lwjgl3</artifactId>
+  		<version>${jme3_version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jmonkeyengine</groupId>
+  		<artifactId>jme3-networking</artifactId>
+  		<version>${jme3_version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jmonkeyengine</groupId>
+  		<artifactId>jme3-terrain</artifactId>
+  		<version>${jme3_version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jmonkeyengine</groupId>
+  		<artifactId>jme3-core</artifactId>
+  		<version>${jme3_version}</version>
+  	</dependency>
+  </dependencies>
 </project>
